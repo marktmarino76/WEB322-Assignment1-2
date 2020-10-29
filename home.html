@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+<title>Home Page</title>
+</head>
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <a class="navbar-brand" href="#">
+            <img src="images/AirBNBLogo.jpg" width="100" height="80">
+    
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-item nav-link" href="userRegistration.html">Register</a>
+            </div>
+          </div>
+      </nav>
+</header>
+<body>
+
+<!--Promotional Section (Banner)-->
+
+
+
+    <!--Forum To Book A Room -->
+<div id="bookRoomDiv">
+    <p><b>Book unique places to stay and things to do.</b></p>
+    <form id="bookRoomForum">
+        <label for="location">WHERE</label><br>
+        <input type="text" id="location" name="location" placeholder="Anywhere"><br>
+        <label for="checkIn">CHECK-IN</label> <label for="checkOut">CHECK-OUT</label><br>
+        <input type="date" id="checkIn" name="checkIn">
+      
+        <input type="date" id="checkOut" name="checkOut"><br>
+        <label for="guests">GUESTS</label><br>
+        <select id="guests" name="numOfGuests" form="bookRoomForum" style="width:150px; height:30px;" >
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+    </form>
+
+    <!--Informational Section (Provide content,images and a video explaing why “ AirB&B ” is to the visitors/customers -->
+
+    <!--Footer Section (This section must include footer menu items, social media links, and any other information you deem necessary-->
+</div>
+</body>
+</html>
