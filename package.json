@@ -1,0 +1,23 @@
+{
+  "name": "assignmentone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marktmarino76/WEB322-Assignment1-2.git"
+  },
+  "author": "mark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marktmarino76/WEB322-Assignment1-2/issues"
+  },
+  "homepage": "https://github.com/marktmarino76/WEB322-Assignment1-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mdbootstrap": "^4.19.1"
+  }
+}

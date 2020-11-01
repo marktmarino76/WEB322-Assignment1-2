@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <!-- Material Design
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    -->
+    <link rel="stylesheet" href="/css/userRegistration.css" type="text/css" />
+    <title>Home Page</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="navWrap">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarReponsive"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarReponsive">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./roomListing.html">Room Listings</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-toggle="modal"
+                  data-target="#modalLRForm"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!--navWrap-->
+    </header>
+    
+<!--Registration Form-->
+   <div id="signup-form-div">
+    <div class="signup-form-container">
+      <p style="color: rgba(5, 86, 136, 1)">
+        <b>Sign Up Form</b>
+      </p>
+      <form id="signup-form">
+        <label for="location">EMAIL</label><br />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email Address"
+        /><br><br>
+        <label for="firstName">FIRST NAME</label><br>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name"/><br><br>
+        <label for="lastName">LAST NAME</label><br>
+        <input type="text" id="lastName" name="lastName"  placeholder="Last Name"/><br><br>
+        <label for="password">PASSWORD</label><br>
+        <input type="password" id="password" name="password" placeholder="Create a password"/><br><br>
+        <label for="birthday">BIRTHDAY</label><br>
+        <p>To sign up, you need to be at least 18. <br>Other people who use Airbnb won't see your birthday.</p>
+      <div class="date-dropdowns">
+        
+      </div>
+        <button type="button">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    <!--Modal: Login / Register Form-->
+    <div
+      class="modal fade"
+      id="modalLRForm"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Modal cascading tabs-->
+          <div class="modal-c-tabs">
+            <!-- Nav tabs -->
+            <ul
+              class="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
+              role="tablist"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-toggle="tab"
+                  href="#panel7"
+                  role="tab"
+                  ><i class="fas fa-user mr-1"></i> Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"
+                  ><i class="fas fa-user-plus mr-1"></i> Register</a
+                >
+              </li>
+            </ul>
+
+            <!-- Tab panels -->
+            <div class="tab-content">
+              <!--Panel 7-->
+              <div
+                class="tab-pane fade in show active"
+                id="panel7"
+                role="tabpanel"
+              >
+                <!--Body-->
+                <div class="modal-body mb-1">
+                  <div class="md-form form-sm mb-5">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input
+                      type="email"
+                      id="modalLRInput10"
+                      class="form-control form-control-sm validate"
+                      placeholder="Email Address"
+                    />
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="modalLRInput10"
+                      >Your email</label
+                    >
+                  </div>
+
+                  <div class="md-form form-sm mb-4">
+                    <i class="fas fa-lock prefix"></i>
+                    <input
+                      type="password"
+                      id="modalLRInput11"
+                      class="form-control form-control-sm validate"
+                      placeholder="Password"
+                    />
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="modalLRInput11"
+                      >Your password</label
+                    >
+                  </div>
+                  <div class="text-center mt-2">
+                    <button class="btn btn-info">
+                      Log in <i class="fas fa-sign-in ml-1"></i>
+                    </button>
+                  </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="options text-center text-md-right mt-1">
+                    <p>
+                      Not a member? <a href="#" class="blue-text">Sign Up</a>
+                    </p>
+                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-info waves-effect ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+              <!--/.Panel 7-->
+
+              <!--Panel 8-->
+              <div class="tab-pane fade" id="panel8" role="tabpanel">
+                <!--Body-->
+                <div class="modal-body">
+                  <div class="md-form form-sm mb-5">
+                    <i class="fas fa-envelope prefix"></i>
+                    <input
+                      type="email"
+                      id="modalLRInput12"
+                      class="form-control form-control-sm validate"
+                      placeholder="Email address"
+                    />
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="modalLRInput12"
+                      >Your email</label
+                    >
+                  </div>
+
+                  <div class="md-form form-sm mb-5">
+                    <i class="fas fa-lock prefix"></i>
+                    <input
+                      type="password"
+                      id="modalLRInput13"
+                      class="form-control form-control-sm validate"
+                      placeholder="Password"
+                    />
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="modalLRInput13"
+                      >Your password</label
+                    >
+                  </div>
+
+                  <div class="md-form form-sm mb-4">
+                    <i class="fas fa-lock prefix"></i>
+                    <input
+                      type="password"
+                      id="modalLRInput14"
+                      class="form-control form-control-sm validate"
+                      placeholder="Repeat Password"
+                    />
+                    <label
+                      data-error="wrong"
+                      data-success="right"
+                      for="modalLRInput14"
+                      >Repeat password</label
+                    >
+                  </div>
+
+                  <div class="text-center form-sm mt-2">
+                    <button class="btn btn-info">
+                      Sign up <i class="fas fa-sign-in ml-1"></i>
+                    </button>
+                  </div>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                  <div class="options text-right">
+                    <p class="pt-1">
+                      Already have an account?
+                      <a href="#" class="blue-text">Log In</a>
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-info waves-effect ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+              <!--/.Panel 8-->
+            </div>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
+
+  
+    <!--Footer Section (This section must include footer menu items, social media links, and any other information you deem necessary-->
+
+    <footer class="page-footer font-small stylish-color-dark pt-4">
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-4 mx-auto">
+            <!-- Content -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
+              Footer Content
+            </h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto">
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto">
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto">
+            <!-- Links -->
+            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+      <!-- Footer Links -->
+
+      <hr />
+
+      <!-- Call to action -->
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
+        </li>
+      </ul>
+      <!-- Call to action -->
+
+      <hr />
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fab fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> Airbnb.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+    <script
+      type="text/javascript"
+      src="node_modules/mdbootstrap/js/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/mdbootstrap/js/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/mdbootstrap/js/bootstrap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="node_modules/mdbootstrap/js/mdb.min.js"
+    ></script>
+  </body>
+</html>
