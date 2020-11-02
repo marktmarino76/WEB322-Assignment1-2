@@ -42,6 +42,7 @@
 
 /* BOOK A ROOM FORM CSS INCLUDING BACKGROUND IMAGE */
 #bookRoomDiv {
+  padding-top:90px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,6 +125,13 @@ select {
 }
 
 /* INFORMATION SECTION CSS (IN THE NEWS) */
+
+.news-image-container > img{
+max-height: 60px;
+max-width: 80%;
+height: auto;
+}
+
 .news-image-container {
   width: 100%;
   text-align: center;
