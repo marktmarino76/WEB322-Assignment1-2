@@ -1,26 +1,29 @@
+/* NAVBAR CSS */
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
   color: rgba(5, 86, 136, 1) !important;
   text-align: center;
   font-size: 25px;
   height: 90px;
-  padding:0!important;
+  padding: 0 !important;
 }
 
 .nav-item {
   margin-left: 50px;
 }
 
-.promotion-title{
-    font-size: 30px;
-    font-weight: 300;
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
-    text-align: center;
+/* PROMOTION SECTION CSS */
+.promotion-title {
+  font-size: 30px;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  text-align: center;
 }
-.promotion-container{
-   padding: 8%  5%;
+.promotion-container {
+  padding: 8% 5%;
 }
 .card:hover {
   transform: translateY(-10px);
@@ -28,16 +31,16 @@
 }
 
 .card {
-  box-shadow: 10px 10px 15px  rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
   transition: all 400ms ease;
-
 }
 
-.card-img-top{
-    height:300px;
-object-fit: cover;
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
 }
 
+/* BOOK A ROOM FORM CSS INCLUDING BACKGROUND IMAGE */
 #bookRoomDiv {
   display: flex;
   justify-content: center;
@@ -65,14 +68,14 @@ object-fit: cover;
   box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
 }
 
-#bookRoomForum:hover{
+#bookRoomForum:hover {
   background-color: white;
 }
 
 form {
   margin-top: 3em;
   padding: 2em;
-  border: none; /*1px solid black;*/
+  border: none;
   max-width: 800px;
   min-width: 400px;
   margin-left: auto;
@@ -82,6 +85,11 @@ form {
   align-items: center;
   grid-gap: 20px;
 }
+
+label {
+  padding-top: 10px;
+}
+
 button {
   background: none;
   border: 2px solid rgba(5, 86, 136, 1);
@@ -104,34 +112,35 @@ select {
   color: rgba(5, 86, 136, 1);
 }
 
-label {
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
+/* SCROLL THROUGH BACKGROUND IMAGE */
 .background-float-container {
   width: 100%;
   height: 500px;
-  margin-top:50px;
+  margin-top: 50px;
   background: url("../images/homePage.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
 
-.review-container{
-    width:100%;
-    padding:0 100px;
-    margin-top: 50px;
+/* INFORMATION SECTION CSS (IN THE NEWS) */
+.news-image-container {
+  width: 100%;
+  text-align: center;
+}
+.news-review-container {
+  width: 100%;
+  padding: 0 100px;
+  margin-top: 50px;
 }
 
-.review-text-container{
-    padding:15px;
+.news-text-container {
+  padding: 15px;
 }
 
-.review-title{
-    font-size: 30px;
-    font-weight: 300;
-    border-bottom: 1px solid black;
-    padding-bottom: 5px;
+.news-title {
+  font-size: 30px;
+  font-weight: 300;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }

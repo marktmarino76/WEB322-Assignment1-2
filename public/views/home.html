@@ -33,23 +33,13 @@
       crossorigin="anonymous"
     />
 
-    <!-- Material Design
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    -->
-    <link  href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
     <title>Home Page</title>
   </head>
 
   <body>
     <header>
+      <!--NAVBAR-->
       <div id="navWrap">
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
           <button
@@ -69,204 +59,13 @@
                 <a class="nav-link" href="./roomListing.html">Room Listings</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-toggle="modal"
-                  data-target="#modalLRForm"
-                  >Login</a
-                >
+                <a class="nav-link" href="userRegistration.html">Login</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
-      <!--navWrap-->
     </header>
-
-    <!--Modal: Login / Register Form-->
-    <div
-      class="modal fade"
-      id="modalLRForm"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog cascading-modal" role="document">
-        <!--Content-->
-        <div class="modal-content">
-          <!--Modal cascading tabs-->
-          <div class="modal-c-tabs">
-            <!-- Nav tabs -->
-            <ul
-              class="nav nav-tabs md-tabs tabs-2 light-blue darken-3"
-              role="tablist"
-            >
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-toggle="tab"
-                  href="#panel7"
-                  role="tab"
-                  ><i class="fas fa-user mr-1"></i> Login</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"
-                  ><i class="fas fa-user-plus mr-1"></i> Register</a
-                >
-              </li>
-            </ul>
-
-            <!-- Tab panels -->
-            <div class="tab-content">
-              <!--Panel 7-->
-              <div
-                class="tab-pane fade in show active"
-                id="panel7"
-                role="tabpanel"
-              >
-                <!--Body-->
-                <div class="modal-body mb-1">
-                  <div class="md-form form-sm mb-5">
-                    <i class="fas fa-envelope prefix"></i>
-                    <input
-                      type="email"
-                      id="modalLRInput10"
-                      class="form-control form-control-sm validate"
-                      placeholder="Email Address"
-                    />
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      for="modalLRInput10"
-                      >Your email</label
-                    >
-                  </div>
-
-                  <div class="md-form form-sm mb-4">
-                    <i class="fas fa-lock prefix"></i>
-                    <input
-                      type="password"
-                      id="modalLRInput11"
-                      class="form-control form-control-sm validate"
-                      placeholder="Password"
-                    />
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      for="modalLRInput11"
-                      >Your password</label
-                    >
-                  </div>
-                  <div class="text-center mt-2">
-                    <button class="btn btn-info">
-                      Log in <i class="fas fa-sign-in ml-1"></i>
-                    </button>
-                  </div>
-                </div>
-                <!--Footer-->
-                <div class="modal-footer">
-                  <div class="options text-center text-md-right mt-1">
-                    <p>
-                      Not a member? <a href="./userRegistration.html" class="blue-text">Sign Up</a>
-                    </p>
-                    <p>Forgot <a href="#" class="blue-text">Password?</a></p>
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-info waves-effect ml-auto"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-              <!--/.Panel 7-->
-
-              <!--Panel 8-->
-              <div class="tab-pane fade" id="panel8" role="tabpanel">
-                <!--Body-->
-                <div class="modal-body">
-                  <div class="md-form form-sm mb-5">
-                    <i class="fas fa-envelope prefix"></i>
-                    <input
-                      type="email"
-                      id="modalLRInput12"
-                      class="form-control form-control-sm validate"
-                      placeholder="Email address"
-                    />
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      for="modalLRInput12"
-                      >Your email</label
-                    >
-                  </div>
-
-                  <div class="md-form form-sm mb-5">
-                    <i class="fas fa-lock prefix"></i>
-                    <input
-                      type="password"
-                      id="modalLRInput13"
-                      class="form-control form-control-sm validate"
-                      placeholder="Password"
-                    />
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      for="modalLRInput13"
-                      >Your password</label
-                    >
-                  </div>
-
-                  <div class="md-form form-sm mb-4">
-                    <i class="fas fa-lock prefix"></i>
-                    <input
-                      type="password"
-                      id="modalLRInput14"
-                      class="form-control form-control-sm validate"
-                      placeholder="Repeat Password"
-                    />
-                    <label
-                      data-error="wrong"
-                      data-success="right"
-                      for="modalLRInput14"
-                      >Repeat password</label
-                    >
-                  </div>
-
-                  <div class="text-center form-sm mt-2">
-                    <button class="btn btn-info">
-                      Sign up <i class="fas fa-sign-in ml-1"></i>
-                    </button>
-                  </div>
-                </div>
-                <!--Footer-->
-                <div class="modal-footer">
-                  <div class="options text-right">
-                    <p class="pt-1">
-                      Already have an account?
-                      <a href="#" class="blue-text">Log In</a>
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    class="btn btn-outline-info waves-effect ml-auto"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-              <!--/.Panel 8-->
-            </div>
-          </div>
-        </div>
-        <!--/.Content-->
-      </div>
-    </div>
 
     <!--Forum To Book A Room -->
     <div id="bookRoomDiv">
@@ -276,16 +75,22 @@
         </p>
         <form id="bookRoomForum">
           <label for="location">WHERE</label><br />
-          <input
-            type="text"
+          <select
             id="location"
             name="location"
-            placeholder="Anywhere"
-          /><br />
-          <label for="checkIn">CHECK-IN</label>
-          <label for="checkOut">CHECK-OUT</label><br />
-          <input type="date" id="checkIn" name="checkIn" />
+            form="bookRoomForum"
+            style="width: 150px; height: 30px"
+          >
+            <option value="1">City</option>
+            <option value="2">Toronto</option>
+            <option value="3">Victoria</option>
+            <option value="4">Winnipeg</option>
+            <option value="4">PEI</option></select
+          ><br />
+          <label for="checkIn">CHECK-IN</label><br />
 
+          <input type="date" id="checkIn" name="checkIn" /><br />
+          <label for="checkOut">CHECK-OUT</label><br />
           <input type="date" id="checkOut" name="checkOut" /><br />
           <label for="guests">GUESTS</label><br />
           <select
@@ -300,7 +105,7 @@
             <option value="4">4 Guests</option>
           </select>
           <br /><br />
-          <button type="button">Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
@@ -313,7 +118,7 @@
           <div class="card">
             <img
               class="card-img-top"
-              src="../images/UniqueStay.jpg"
+              src="../images/promo1.jpg"
               alt="PROMO ONE"
             />
             <div class="card-body">
@@ -351,7 +156,7 @@
           <div class="card">
             <img
               class="card-img-top"
-              src="../images/UniqueStay.jpg"
+              src="../images/promo3.jpg"
               alt="PROMO ONE"
             />
             <div class="card-body">
@@ -371,19 +176,20 @@
     <!--Beach background picture-->
     <div class="background-float-container"></div>
     <!--Informational Section (Provide content,images and a video explaing why “ AirB&B ” is to the visitors/customers -->
-    <div class="review-container">
-      <span class="review-title">In the news</span><br /><br />
+    <div class="news-review-container">
+      <span class="news-title">In the news</span><br /><br />
 
       <div class="row">
         <div class="col-6">
-          <img
-            src="../images/forbes.png"
-            height="75px;"
-            style="text-align: center; display: inline-block"
-          />
-
-          <div class="review-text-container">
-            <span class="review-text">
+          <div class="news-image-container">
+            <img
+              src="../images/forbes.png"
+              height="75px;"
+              style="text-align: center; display: inline-block"
+            />
+          </div>
+          <div class="news-text-container">
+            <span class="news-text">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -391,17 +197,19 @@
               content here',
             </span>
           </div>
-          <!--review-text-container-->
+          <!--news-text-container-->
         </div>
         <!--column-->
         <div class="col-6">
-          <img
-            src="../images/newyorktimes.png"
-            height="75px;"
-            style="display: inline-block"
-          />
-          <div class="review-text-container">
-            <span class="review-text">
+          <div class="news-image-container">
+            <img
+              src="../images/newyorktimes.png"
+              height="75px;"
+              style="display: inline-block"
+            />
+          </div>
+          <div class="news-text-container">
+            <span class="news-text">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -409,20 +217,22 @@
               content here',
             </span>
           </div>
-          <!--review-text-container-->
+          <!--news-text-container-->
         </div>
         <!--column-->
       </div>
       <!--row-->
       <div class="row">
         <div class="col-6">
-          <img
-            src="../images/washingtonpost.png"
-            height="75px;"
-            style="display: inline-block; margin: 10px"
-          />
-          <div class="review-text-container">
-            <span class="review-text">
+          <div class="news-image-container">
+            <img
+              src="../images/washingtonpost.png"
+              height="75px;"
+              style="display: inline-block; margin: 10px"
+            />
+          </div>
+          <div class="news-text-container">
+            <span class="news-text">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -430,17 +240,19 @@
               content here',
             </span>
           </div>
-          <!--review-text-container-->
+          <!--news-text-container-->
         </div>
         <!--column-->
         <div class="col-6">
-          <img
-            src="../images/wsj.png"
-            height="50px;"
-            style="display: inline-block; margin: 10px"
-          />
-          <div class="review-text-container">
-            <span class="review-text">
+          <div class="news-image-container">
+            <img
+              src="../images/wsj.png"
+              height="50px;"
+              style="display: inline-block; margin: 10px"
+            />
+          </div>
+          <div class="news-text-container">
+            <span class="news-text">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -448,7 +260,7 @@
               content here',
             </span>
           </div>
-          <!--review-text-container-->
+          <!--news-text-container-->
         </div>
         <!--column-->
       </div>
@@ -457,112 +269,6 @@
     <!--Footer Section (This section must include footer menu items, social media links, and any other information you deem necessary-->
 
     <footer class="page-footer font-small stylish-color-dark pt-4">
-      <!-- Footer Links -->
-      <div class="container text-center text-md-left">
-        <!-- Grid row -->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-4 mx-auto">
-            <!-- Content -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">
-              Footer Content
-            </h5>
-            <p>
-              Here you can use rows and columns to organize your footer content.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 mx-auto">
-            <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 mx-auto">
-            <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 mx-auto">
-            <!-- Links -->
-            <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-      <!-- Footer Links -->
-
-      <hr />
-
-      <!-- Call to action -->
-      <ul class="list-unstyled list-inline text-center py-2">
-        <li class="list-inline-item">
-          <h5 class="mb-1">Register for free</h5>
-        </li>
-        <li class="list-inline-item">
-          <a href="#!" class="btn btn-danger btn-rounded">Sign up!</a>
-        </li>
-      </ul>
-      <!-- Call to action -->
-
       <hr />
 
       <!-- Social buttons -->
@@ -603,21 +309,21 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-    <script
-      type="text/javascript"
-      src="node_modules/mdbootstrap/js/jquery.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="node_modules/mdbootstrap/js/popper.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="node_modules/mdbootstrap/js/bootstrap.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="node_modules/mdbootstrap/js/mdb.min.js"
-    ></script>
   </body>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/jquery.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/popper.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/bootstrap.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="node_modules/mdbootstrap/js/mdb.min.js"
+  ></script>
 </html>

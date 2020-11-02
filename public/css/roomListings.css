@@ -1,3 +1,4 @@
+/* NAVBAR CSS */
 .navbar {
     background-color: rgba(255, 255, 255, 0.5) !important;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
@@ -11,15 +12,14 @@
   .nav-item {
     margin-left: 50px;
   }
-.nav-item{
-    margin-left: 50px;
-}
+
 
 .container-fluid{
 margin-top: 8%;
 margin-bottom: 8%;
 }
 
+/* ROOM LISTING SECTION CSS */
 .room-listing-title{
     font-size: 30px;
     font-weight: 300;

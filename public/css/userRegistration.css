@@ -1,103 +1,97 @@
-.navbar {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-    color: rgba(5, 86, 136, 1) !important;
-    text-align: center;
-    font-size: 25px;
-    height: 90px;
-    padding:0!important;
-  }
-  
-  .nav-item {
-    margin-left: 50px;
-  }
-  
+/* NAVBAR CSS */
+ .navbar {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  color: rgba(5, 86, 136, 1) !important;
+  text-align: center;
+  font-size: 25px;
+  height: 90px;
+  padding: 0 !important;
+}
 
-  .signup-form-container{
-   
-     margin-top: 100px;
-  }
+.nav-item {
+  margin-left: 50px;
+}
 
-  #signup-form-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 75vh;
-    font-size: 25px;
-  
-    background: url("../images/bgpic.jpg") no-repeat 50% 25%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  
-  #signup-form {
-    color: rgba(5, 86, 136, 1);
-    font-weight: bold;
-    font-size: 15px;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
-  }
-  
-  #signup-form:hover{
-    background-color: white;
-  }
-  
-  form {
-    margin-top: 3em;
-    padding: 2em;
-    border: none; /*1px solid black;*/
-    max-width: 800px;
-    min-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
-    align-items: center;
-    grid-gap: 20px;
-  }
-  button {
-    background: none;
-    border: 2px solid rgba(5, 86, 136, 1);
-    color: rgba(5, 86, 136, 1);
-    border-radius: 0;
-    padding: 5px 15px;
-  }
-  button:hover {
-    background-color: rgba(5, 86, 136, 1);
-    color: white;
-  }
-  input,
-  select {
-    border: none;
-    background: none;
-    border-bottom: 2px solid rgba(5, 86, 136, 0.8);
-    color: rgba(5, 86, 136, 1);
-  }
-  ::placeholder {
-    color: rgba(5, 86, 136, 1);
-  }
-  
-  label {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  
-  .background-float-container {
-    width: 100%;
-    height: 500px;
-    margin-top:50px;
-    background: url("../images/homePage.jpg") no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  }
-  
- 
-  
+/* SIGNUP FORM CSS */
+
+.login-form-container {
+  margin-top: 100px;
+}
+
+#login-form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 75vh;
+  font-size: 25px;
+
+  background: url("../images/bgpic.jpg") no-repeat 50% 25%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.register-link{
+  cursor: pointer;
+}
+#login-form {
+  color: rgba(5, 86, 136, 1);
+  font-weight: bold;
+  font-size: 15px;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+}
+
+#login-form:hover {
+  background-color: white;
+}
+
+form {
+  margin-top: 3em;
+  padding: 2em;
+  border: none; /*1px solid black;*/
+  max-width: 800px;
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  align-items: center;
+}
+button {
+  background: none;
+  border: 2px solid rgba(5, 86, 136, 1);
+  color: rgba(5, 86, 136, 1);
+  border-radius: 0;
+  padding: 5px 15px;
+}
+button:hover {
+  background-color: rgba(5, 86, 136, 1);
+  color: white;
+}
+input {
+  border: none;
+  background: none;
+  border-bottom: 2px solid rgba(5, 86, 136, 0.8);
+  color: rgba(5, 86, 136, 1);
+}
+::placeholder {
+  color: rgba(5, 86, 136, 1);
+}
+
+
+/* BACKGROUND IMAGE CSS */
+.background-float-container {
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+  background: url("../images/homePage.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
