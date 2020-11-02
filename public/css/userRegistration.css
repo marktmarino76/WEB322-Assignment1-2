@@ -16,13 +16,13 @@
 /* SIGNUP FORM CSS */
 
 #login-form-div {
-  padding-top:90px;
+  padding-top:120px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 75vh;
+ min-height: 75vh;
   font-size: 25px;
 
   background: url("../images/bgpic.jpg") no-repeat 50% 25%;
