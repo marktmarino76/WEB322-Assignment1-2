@@ -16,7 +16,7 @@
 /* SIGNUP FORM CSS */
 
 #login-form-div {
-  padding-top:120px;
+  padding:120px 0;
   display: flex;
   justify-content: center;
   align-items: center;
