@@ -1,0 +1,14 @@
+Host:
+ec2-54-158-190-214.compute-1.amazonaws.com
+Database:
+d5iq3k2u612r5k
+User:
+xcmydtwgaggcsb
+Port:
+5432
+Password:
+d742aece60729b0102aa5b20f9052d913bb46670e2dba074d501446c125b14b7
+URI
+postgres://xcmydtwgaggcsb:d742aece60729b0102aa5b20f9052d913bb46670e2dba074d501446c125b14b7@ec2-54-158-190-214.compute-1.amazonaws.com:5432/d5iq3k2u612r5k
+Heroku CLI
+heroku pg:psql postgresql-clean-02677 --app mark-web322

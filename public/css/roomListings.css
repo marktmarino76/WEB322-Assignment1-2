@@ -10,7 +10,7 @@
   }
   
   .nav-item {
-    margin-left: 50px;
+  margin:0px 30px;
   }
 
 
@@ -19,6 +19,13 @@ margin-top: 8%;
 margin-bottom: 8%;
 }
 
+
+.login-button{
+    background: none;
+    color: rgba(5, 86, 136, 1);
+    border:none;
+    /* padding: 5px 15px; */
+}
 /* ROOM LISTING SECTION CSS */
 .room-listing-title{
     font-size: 30px;

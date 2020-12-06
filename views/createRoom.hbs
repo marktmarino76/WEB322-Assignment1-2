@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Material Design-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="text/plain" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <link rel="stylesheet" href="../css/roomListings.css" type="text/css" />
+  <link rel="stylesheet" href="../css/createRoom.css" type="text/css" />
+
+  <title>Home Page</title>
+</head>
+
+<body>
+  <header>
+    <!--NAVBAR-->
+    <div id="navWrap">
+      <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarReponsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarReponsive">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/roomListing">Room Listings</a>
+            </li>
+          </ul>
+          <div class="dropdown">
+            <button class="dropdown-toggle login-button" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{#if user}}{{user.firstname}} {{user.lastname}} {{else}}Login/Signup{{/if}}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              {{#if user}}<a class="dropdown-item" href="/logout">Logout</a>{{else}}<a class="dropdown-item"
+                href="/register">Login/Signup</a>{{/if}}
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <!--Create a room forum -->
+
+
+  <!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto" style="margin-top: 10%;">
+          <div class="card card-signin flex-row my-5">
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Create A Room</h5>
+              </br>
+              <form id="create-room-form" action="/createRoom" method="POST" enctype="multipart/form-data">
+                <div class="form-label-group">
+                  <input type="text" name="title" id="title" class="form-control" placeholder="Room Title" required>
+                  <label for="title">Room Title</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="price" id="price" class="form-control" placeholder="Price" required>
+                  <label for="price">Price</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="description" id="description" class="form-control" placeholder="Description"
+                    required>
+                  <label for="description">Description/details</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="location" id="location" class="form-control" placeholder="Location" required>
+                  <label for="location">Location</label>
+                </div>
+                </br>
+
+                <div class="form-label-group">
+                  <input type="file" name="photo" id="photo" required> </br>
+                  <label for="photo">Photo</label>
+                </div>
+                </br></br>
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Create Room</button>
+                <hr class="my-4">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 mx-auto" style="margin-top: 10%; inline">
+          <div class="card card-signin flex-row my-5">
+            <div class="card-img-left d-none d-md-flex">
+              <!-- Background image for card set in CSS! -->
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-center">Edit A Room</h5>
+              <form id="create-room-form" action="/updateRoom" method="POST" enctype="multipart/form-data">
+                <div class="form-label-group">
+                  <label for="roomID">Choose Room Name</label>
+                  <select class="custom-select" name="roomID" id="roomID" required>
+                    <option value="">Choose a Room</option>
+                    {{#each rooms}}
+                    {{this}}
+                    <option value={{_id}}>{{title}}</option>
+                    {{/each}}
+                  </select>
+
+                </div>
+                <div class="form-label-group">
+                  <input type="text" name="title" id="title" class="form-control" placeholder="Room Title" required>
+                  <label for="title">Room Title</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="price" id="price" class="form-control" placeholder="Price" required>
+                  <label for="price">Price</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="description" id="description" class="form-control" placeholder="Description"
+                    required>
+                  <label for="description">Description/details</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="location" id="location" class="form-control" placeholder="Location" required>
+                  <label for="location">Location</label>
+                </div>
+                </br>
+
+                <div class="form-label-group">
+                  <input type="file" name="photo" id="photo" required> </br>
+                  <label for="photo">Photo</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Edit Room</button>
+                <hr class="my-4">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Footer Section (This section must include footer menu items, social media links, and any other information you deem necessary-->
+  <footer class="page-footer font-small stylish-color-dark pt-4">
+    <hr />
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-gplus mx-1">
+          <i class="fab fa-google-plus-g"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
