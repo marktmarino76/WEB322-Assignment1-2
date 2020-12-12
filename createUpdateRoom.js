@@ -37,6 +37,7 @@ route.post("/createRoom", upload.single("photo"), (req, res) => {
   });
 
   roomData.save();
+  res.redirect("/roomListing");
 });
 
 route.post("/updateRoom", upload.single("photo"), async (req, res) => {
@@ -53,6 +54,7 @@ route.post("/updateRoom", upload.single("photo"), async (req, res) => {
   const updateDoc = await Room.findOneAndUpdate(filter,updatedRoom,{
     new:true
   });
+  res.redirect("/roomListing");
 });
 
 //-------------------------------------------------------------- ADMINISTRATOR CREATE ROOM PAGE ----------------------------------------------------------------------------//
@@ -73,8 +75,15 @@ route.get("/roomListing", async function (req, res) {
   });
 });
 
-route.get("/api/users/:userId", (req, res) => {
-  res.json({message: "get user with Id: " + req.params.userId});
+//-------------------------------------------------------------- ROOM DETAILS ----------------------------------------------------------------------------
+route.get("/roomDetail/:roomId", async function (req, res) {
+  //res.json({message: req.params.userId});
+  res.render("roomDetail",{
+    user: req.session.user,
+    layout: false,
+    roomDetail: await Room.find({_id: req.params.roomId}).lean()
+  });
+ 
 });
 
 

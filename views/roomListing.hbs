@@ -47,7 +47,8 @@
             <li class="nav-item">
               <a class="nav-link" href="/roomListing">Room Listings</a>
             </li>
-          </ul>
+         </ul>
+         
           <div class="dropdown">
             <button class="dropdown-toggle login-button" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -55,12 +56,15 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               {{#if user}}{{#if user.admin}}<a class="dropdown-item"
+                href="/createRoom">Create/Edit Room</a><a class="dropdown-item"
                 href="/administratorDashboard">Dashboard</a>{{else}}<a class="dropdown-item"
                 href="/dashboard">Dashboard</a>{{/if}}<a class="dropdown-item" href="/logout">Logout</a>{{else}}<a
                 class="dropdown-item" href="/register">Login/Signup</a>{{/if}}
 
             </div>
           </div>
+         
+           
         </div>
       </nav>
     </div>
@@ -76,18 +80,15 @@
     <span class="room-listing-title">Room Listings</span>
     <div class="row padding room-listing-row" id="roomListingRow">
       {{#each roomCollection}}
-      
-  
+
       <div class="col-md-4 card-container" onclick="redirectRoom('{{_id}}')" >
 
+<a style="text-decoration: none;" href="/roomDetail/{{_id}}">
         <div class="card text-center mx-auto" style="width:80%;">
           <img class="card-img" src="/images/{{photo}}" />
           <div class="card-body">
-            <h6 class="card-subtitle mb-2 text-muted">
-              
-              <a href="/roomDetail/{{_id}}">
-              {{title}}
-              </a>
+            <h6 class="card-subtitle mb-2 text-muted">       
+              {{title}} 
             </h6>
             <h5 class="card-title">
               {{description}}
@@ -96,10 +97,11 @@
             <p class="card-price">
               ${{price}} per Night
             </p>
-            <p class="card-rating"><i class="far fa-star">rooms rating</i></p>
+            <p class="card-rating">{{location}}</i></p>
           </div>
 
         </div>
+        </a>
       </div>
      
       {{/each}}

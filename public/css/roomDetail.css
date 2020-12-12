@@ -1,0 +1,69 @@
+/* NAVBAR CSS */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+    color: rgba(5, 86, 136, 1) !important;
+    text-align: center;
+    font-size: 25px;
+    height: 90px;
+    padding:0!important;
+  }
+  
+  .nav-item {
+  margin:0px 30px;
+  }
+
+
+.container-fluid{
+margin-top: 8%;
+margin-bottom: 8%;
+}
+
+
+.login-button{
+    background: none;
+    color: rgba(5, 86, 136, 1);
+    border:none;
+    /* padding: 5px 15px; */
+}
+/* ROOM LISTING SECTION CSS */
+.room-listing-title{
+    font-size: 30px;
+    font-weight: 300;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+#roomListingsContainer{
+    text-align: center;
+    width:100%;
+    margin-top:200px;
+}
+
+.room-listing-row{
+margin-top: 30px;
+}
+
+
+.card-img{
+height:500px;
+object-fit: cover;
+
+}
+
+.card{
+   text-align: center;
+}
+
+.card-img-top{
+    border-radius: 25px 25px 0px 0px;
+}
+
+.card-container{
+    margin-bottom: 15px;
+}
+
+.bookRoom{
+    
+}
+
+

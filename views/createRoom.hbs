@@ -54,7 +54,7 @@
               {{#if user}}{{user.firstname}} {{user.lastname}} {{else}}Login/Signup{{/if}}
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              {{#if user}}<a class="dropdown-item" href="/logout">Logout</a>{{else}}<a class="dropdown-item"
+              {{#if user}}<a class="dropdown-item" href="/administratorDashboard">Dashboard</a><a class="dropdown-item" href="/logout">Logout</a>{{else}}<a class="dropdown-item"
                 href="/register">Login/Signup</a>{{/if}}
 
             </div>

@@ -58,6 +58,7 @@ app.get("/", function (req, res) {
   });
 });
 
+//-------------------------------------------------------------- HOME PAGE - ROOM LISTINGS BY LOCATION FORM ----------------------------------------------------------------------------//
 const Room = require("./room");
 app.post("/roomListingByLocation", async function (req, res) {
   //Renders the home page and sends cookies to detect whether user is logged in or not
@@ -80,7 +81,9 @@ app.get("/register", function (req, res) {
 //-------------------------------------------------------------- DASH BOARD ----------------------------------------------------------------------------//
 app.get("/dashboard", ensureLogin, (req, res) => {
   //Renders user dashboard page and sends user cookies to detect whether user is logged in or not
-  res.render("dashboard", { user: req.session.user, layout: false });
+  res.render("dashboard", { 
+    user: req.session.user, 
+    layout: false });
 });
 //-------------------------------------------------------------- ADMINISTRATOR DASH BOARD ----------------------------------------------------------------------------//
 app.get("/administratorDashboard", ensureLogin, (req, res) => {
@@ -93,6 +96,19 @@ app.get("/administratorDashboard", ensureLogin, (req, res) => {
 
 //Call back function, once the server starts then it will console Server Up and Running
 app.listen(HTTP_PORT, () => console.log("Server Up and running"));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

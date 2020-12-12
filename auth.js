@@ -34,7 +34,7 @@ router.use(
 router.use(bodyParser.urlencoded({ extended: true }));
 
 //------------------------------------------------------------- REGISTRATION --------------------------------------------------------//
-router.post("/register", async (req, res) => {
+router.post("/register", async function (req, res) {
   try {
     //Checking if user is already in the database
     const emailExist = await User.findOne({ email: req.body.email });
@@ -60,7 +60,10 @@ router.post("/register", async (req, res) => {
   }
 });
 //------------------------------------------------------------- LOGIN -------------------------------------------------------------//
-router.post("/login", async (req, res) => {
+router.post("/login", async function (req, res) {
+  try{
+
+  
   //Checking if the username (email) exists in the database
   const user = await User.findOne({ email: req.body.loginemail });
 
@@ -69,7 +72,7 @@ router.post("/login", async (req, res) => {
   //IF PASSWORD IS NOT CORRECT RENDER THE PAGE AGAIN WITH THE ERROR
 
   //If the username and password recieved are the same as the one found in the database, create session
-  if (user.email === req.body.loginemail && validPass && user) {
+  if (user.email === req.body.loginemail && validPass) {
     // Add the user on the session and redirect them to the dashboard page.
     req.session.user = {
       email: user.email,
@@ -87,6 +90,10 @@ router.post("/login", async (req, res) => {
     // render 'invalid username or password'
     return res.render("userRegistration", { error: true, layout: false });
   }
+}catch{
+    // render 'invalid username or password'
+    return res.render("userRegistration", { error: true, layout: false });
+}
 });
 
 // Log a user out by destroying their session
