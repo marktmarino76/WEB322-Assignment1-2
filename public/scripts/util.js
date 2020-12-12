@@ -1,17 +1,21 @@
-
-
-
-
-
-
-
-
-let redirectRoom = function (obj){
-
-console.log('TEEEEEEEEEST');
-console.log(obj);
-
-
+function calcDateRange(priceOfRoom) {
+  const dateFrom = document.getElementById("checkin-date").valueAsDate;
+  const dateTo = document.getElementById("checkout-date").valueAsDate;
+  if (dateFrom !== null && dateTo !== null) {
+    // Convert back to days and return
+    if (dateTo - dateFrom <= 0) {
+      document.getElementById("total-price").innerText =
+        "Please select a valid date range";
+    }else{
+      const dayInMs = 1000 * 60 * 60 * 24;
+      // Calculate the difference in milliseconds
+      const differenceInMs = Math.abs(dateTo - dateFrom);
+      const totalPrice = priceOfRoom * Math.round(differenceInMs / dayInMs);
+      document.getElementById(
+        "total-price"
+      ).innerText = `Total: $${totalPrice}`;
+    }
+  }
 }
 
 // const rooms = [
@@ -63,8 +67,6 @@ console.log(obj);
 //   populateListings(rooms);
 
 // };
-
-
 
 // function populateListings(roomArr) {
 //   let listingDiv = document.getElementById("roomListingRow");

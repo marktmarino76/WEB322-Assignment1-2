@@ -21,16 +21,32 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
-<!--Extra Bootstrap for check in form -->
+  <!--Extra Bootstrap for check in form -->
 
-<!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+  <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
-<!--Font Awesome (added because you use icons in your prepend/append)-->
-<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <!--Font Awesome (added because you use icons in your prepend/append)-->
+  <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
 
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+  <!-- Inline CSS based on choices in "Settings" tab -->
+  <style>
+    .bootstrap-iso .formden_header h2,
+    .bootstrap-iso .formden_header p,
+    .bootstrap-iso form {
+      font-family: Arial, Helvetica, sans-serif;
+      color: black
+    }
+
+    .bootstrap-iso form button,
+    .bootstrap-iso form button:hover {
+      color: white !important;
+    }
+
+    .asteriskField {
+      color: red;
+    }
+  </style>
 
   <!-- Material Design-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -38,7 +54,7 @@
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
   <script src="../scripts/util.js"></script>
-  <link rel="stylesheet" href="../css/roomDetail.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/roomDetail.css" type="text/css" />
 
   <title>Home Page</title>
 </head>
@@ -53,10 +69,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarReponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="/roomListing">Room Listings</a>
             </li>
           </ul>
@@ -105,45 +121,51 @@
             <p class="card-rating">{{location}}</p>
           </div>
           <hr>
-<form id="bookRoom" class="" method="post">
-     <div class="form-group ">
-      <label class="control-label col-sm-2 requiredField" for="date">
-       Check-in<span class="asteriskField">*</span>
-      </label>
-      
-       <div class="input-group justify-content-center">
-        <div class="input-group-addon">
-         <i class="fa fa-calendar">
-         </i>
+          <form id="bookRoom" action="/calculatePrice" method="POST">
+            <div class="form-group ">
+              <label class="control-label col-sm-2 requiredField" for="date">
+                Check-in<span class="asteriskField">*</span>
+              </label>
+
+              <div class="input-group justify-content-center">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar">
+                  </i>
+                </div>
+                <input class="form-control col-sm-5" id="checkin-date" name="date" placeholder="MM/DD/YYYY" type="date"
+                  onchange="calcDateRange({{price}})" />
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2 requiredField" for="date">
+                Check-Out<span class="asteriskField">*</span>
+              </label>
+              <div class="input-group justify-content-center">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar">
+                  </i>
+                </div>
+                <input class="form-control col-sm-5" id="checkout-date" name="date" placeholder="MM/DD/YYYY" type="date"
+                  onchange="calcDateRange({{price}})" />
+              </div>
+
+            </div>
+
+            <div id="total-price" style="margin-bottom: 20px; font-weight:bold;">
+            </div>
+
+            <div class="form-group">
+
+              <button class="btn btn-primary" name="submit" type="submit">
+                Book Room
+              </button>
+
+            </div>
+          </form>
         </div>
-        <input class="form-control col-sm-5" id="date" name="date" placeholder="MM/DD/YYYY" type="date"/>
-       </div>
-     
-     </div>
-      <div class="form-group">
-      <label class="control-label col-sm-2 requiredField" for="date">
-       Check-Out<span class="asteriskField">*</span>
-      </label>
-       <div class="input-group justify-content-center">
-        <div class="input-group-addon">
-         <i class="fa fa-calendar">
-         </i>
-        </div>
-        <input class="form-control col-sm-5" id="date" name="date" placeholder="MM/DD/YYYY" type="date"/>
-       </div>
-   
-     </div>
-     <div class="form-group">
-    
-       <button class="btn btn-primary" name="submit" type="submit">
-        Book Room
-       </button>
-      
-     </div>
-    </form>
-        </div>
-        
-        
+
+
       </div>
       {{/each}}
     </div>

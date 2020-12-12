@@ -47,6 +47,7 @@ margin-top: 30px;
 .card-img{
 height:500px;
 object-fit: cover;
+object-position: center;
 
 }
 
@@ -63,7 +64,7 @@ object-fit: cover;
 }
 
 .bookRoom{
-    
+
 }
 
 

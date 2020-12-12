@@ -41,10 +41,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarReponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="/">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="/roomListing">Room Listings</a>
             </li>
          </ul>
@@ -83,7 +83,7 @@
 
       <div class="col-md-4 card-container" onclick="redirectRoom('{{_id}}')" >
 
-<a style="text-decoration: none;" href="/roomDetail/{{_id}}">
+<a style="text-decoration: none; color:black" href="/roomDetail/{{_id}}">
         <div class="card text-center mx-auto" style="width:80%;">
           <img class="card-img" src="/images/{{photo}}" />
           <div class="card-body">
